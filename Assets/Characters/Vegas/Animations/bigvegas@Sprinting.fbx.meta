@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c4cc400aadfab9b4cb531122d3f722d4
+guid: 322397d1419b7614da1a7d6637a4e3f9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -171,7 +171,7 @@ ModelImporter:
     400162: newVegas:Spine
     400164: newVegas:Spine1
     400166: newVegas:Spine2
-    7400000: Mutant Jumping
+    7400000: Sprinting
     9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
@@ -189,7 +189,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
       rotation in copied configuration does not match rotation in animation file:\n\t'newVegas:Hair_Front'
-      : rotation error = 3.908588 deg\n"
+      : rotation error = 0.840385 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
@@ -208,10 +208,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Mutant Jumping
+      name: Sprinting
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 18
+      lastFrame: 33
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
