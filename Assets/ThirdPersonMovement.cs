@@ -8,7 +8,10 @@ public class ThirdPersonMovement : MonoBehaviour
     public Transform cam;
 
 
-    public float speed = 6f;
+    public float speed;
+
+    public float walkSpeed = 6f;
+    public float sprintSpeed = 20f;
 
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
@@ -41,6 +44,16 @@ public class ThirdPersonMovement : MonoBehaviour
             {
                 direction.y = jumpSpeed;
             }
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = sprintSpeed;
+            }
+            else
+            {
+                speed = 6f;
+            }
+
         }
 
 
