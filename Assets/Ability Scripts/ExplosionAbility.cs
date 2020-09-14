@@ -6,10 +6,10 @@ public class ExplosionAbility : MonoBehaviour
 {
     [SerializeField] float thrust;
     [SerializeField] Rigidbody rb;
-    [SerializeField] AudioSource boom;
+
     public bool createForce = true;
     public bool shouldExplode = false;
-    public float LifeTime = 10f;
+    public float LifeTime = 2f;
 
     public float power = 10f;
     public float radius = 5f;
@@ -55,12 +55,10 @@ public class ExplosionAbility : MonoBehaviour
                 Rigidbody rb = hit.GetComponent<Rigidbody>();
                 if(rb != null)
                 {
-                    boom.Play(0);
                     rb.AddExplosionForce(power, this.transform.position, radius, upwardThrust);
                 }
             }
             Destroy(this.gameObject);
-            
         }
 
     }

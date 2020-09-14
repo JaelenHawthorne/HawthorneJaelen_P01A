@@ -89,6 +89,15 @@ public class ThirdPersonMovement : MonoBehaviour
                 anim.SetBool("Sprinting", false);
             }
 
+            if (Input.GetMouseButtonDown(0))
+            {
+                anim.SetBool("Attacking", true);
+            }
+            else
+            {
+                anim.SetBool("Attacking", false);
+            }
+
         }
 
 
