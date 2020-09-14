@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
         { //If you press R
-            SceneManager.LoadScene("AbilityTest"); 
+            SceneManager.LoadScene("MainScene"); 
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
