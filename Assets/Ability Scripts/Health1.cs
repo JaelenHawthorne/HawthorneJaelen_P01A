@@ -9,7 +9,7 @@ public class Health1 : MonoBehaviour
     [SerializeField] int currentHealth;
 
     [SerializeField] Slider healthBar;
-
+    [SerializeField] Text healthText;
 
 
     void Start()
@@ -21,6 +21,7 @@ public class Health1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthText.text = currentHealth + " / 100";
         healthBar.value = currentHealth;
     }
 
