@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 482fc7e5c223a3142a4a2805d5ddc8eb
+guid: 04ef72325da82bf42b6063ea3836fd50
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -171,7 +171,7 @@ ModelImporter:
     400162: newVegas:Spine
     400164: newVegas:Spine1
     400166: newVegas:Spine2
-    7400000: Falling Flat Impact
+    7400000: Hurt
     9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
@@ -189,7 +189,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
       rotation in copied configuration does not match rotation in animation file:\n\t'newVegas:Hair_Front'
-      : rotation error = 4.561434 deg\n"
+      : rotation error = 2.463347 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
@@ -208,14 +208,14 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Falling Flat Impact
+      name: Hurt
       takeName: mixamo.com
-      firstFrame: 30
-      lastFrame: 47
+      firstFrame: 10
+      lastFrame: 38.1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
-      cycleOffset: 0
+      cycleOffset: 4.61
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1

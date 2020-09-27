@@ -12,6 +12,11 @@ public class Health1 : MonoBehaviour
     [SerializeField] Text healthText;
 
 
+
+    public bool IsDead = false;
+ 
+
+
     void Start()
     {
         healthBar.maxValue = maxHealth;
@@ -23,6 +28,10 @@ public class Health1 : MonoBehaviour
     {
         healthText.text = currentHealth + " / 100";
         healthBar.value = currentHealth;
+        if (currentHealth == 0)
+        {
+            FindObjectOfType<ThirdPersonMovement>().Dead();
+        }
     }
 
 
@@ -39,6 +48,15 @@ public class Health1 : MonoBehaviour
     public void hurtPlayer(int damage)
     {
         currentHealth -= damage;
+
+        FindObjectOfType<ThirdPersonMovement>().Hurt();
     }
+
+    public void Died()
+    {
+
+    }
+        
+    
 
 }

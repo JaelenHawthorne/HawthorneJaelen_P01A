@@ -49,17 +49,16 @@ public class ThirdPersonMovement : MonoBehaviour
 
         //
 
-    
 
 
 
-            //
+        //
 
-            float horizontal = Input.GetAxisRaw("Horizontal");
+        float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
             Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-
+        
 
             if (vertical < 0)
             {
@@ -131,7 +130,19 @@ public class ThirdPersonMovement : MonoBehaviour
 
     }
 
+    public void Dead()
+    {
+        controller.enabled = false;
+        turnSmoothTime = 1110;
+        anim.SetBool("IsDead", true);
+    }
 
+    public void Hurt()
+    {
+        anim.SetTrigger("Hurt");
+    }
+
+ 
 
    
 }
