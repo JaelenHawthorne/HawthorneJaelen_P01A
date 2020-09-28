@@ -15,8 +15,12 @@ public class ThirdPersonMovement : MonoBehaviour
 
     //
 
-        
-
+    public AudioSource sounds;
+    public AudioClip heal;
+    public AudioClip walk;
+    public AudioClip jump;
+    public AudioClip land;
+    public AudioClip death;
 
 
     public CharacterController controller;
@@ -39,8 +43,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void Start()
     {
-        
-        
+        sounds = GetComponent<AudioSource>();
+
 
     }
 
@@ -72,8 +76,10 @@ public class ThirdPersonMovement : MonoBehaviour
                 if (direction.magnitude >= 0.1f)
                 {
 
+             
 
-                    float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+
+                float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
                     float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
                     transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
@@ -97,6 +103,9 @@ public class ThirdPersonMovement : MonoBehaviour
                     direction.y = jumpSpeed;
 
                     anim.SetBool("Jumping", true);
+
+                sounds.clip = jump;
+                sounds.PlayOneShot(sounds.clip);
                 }
 
                 if (Input.GetKey(KeyCode.LeftShift))
@@ -142,7 +151,29 @@ public class ThirdPersonMovement : MonoBehaviour
         anim.SetTrigger("Hurt");
     }
 
- 
+    public void Cure()
+    {
+        anim.SetTrigger("Heal");
+    }
 
-   
+ private void Fall()
+    {
+        AudioClip fall = land;
+        sounds.PlayOneShot(fall);
+
+    }
+
+    private void Step()
+    {
+        AudioClip step = walk;
+        sounds.PlayOneShot(step);
+
+    }
+
+    private void Die()
+    {
+        AudioClip die = death;
+        sounds.PlayOneShot(die);
+
+    }
 }

@@ -43,6 +43,8 @@ public class Health1 : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+
+        FindObjectOfType<ThirdPersonMovement>().Cure();
     }
 
     public void hurtPlayer(int damage)
@@ -52,10 +54,6 @@ public class Health1 : MonoBehaviour
         FindObjectOfType<ThirdPersonMovement>().Hurt();
     }
 
-    public void Died()
-    {
-
-    }
         
     
 
