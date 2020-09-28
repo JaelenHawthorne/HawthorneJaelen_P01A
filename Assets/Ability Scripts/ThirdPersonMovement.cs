@@ -11,7 +11,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public GameObject Shockwave;
     public GameObject Sparks;
-
+    public GameObject jumpSmoke;
     public GameObject Hearts;
     public GameObject HitEffect;
 
@@ -144,6 +144,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     }
 
+
+
     public void Dead()
     {
         controller.enabled = false;
@@ -184,6 +186,10 @@ public class ThirdPersonMovement : MonoBehaviour
         AudioClip die = death;
         sounds.PlayOneShot(die);
 
+    }
+    private void Jump()
+    {
+        Instantiate(jumpSmoke, transform.position, transform.rotation);
     }
 
 }
